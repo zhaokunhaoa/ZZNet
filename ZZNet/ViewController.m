@@ -17,6 +17,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    NSLog(@"main: %@", [NSThread mainThread]);
+
+    dispatch_queue_t queue = dispatch_queue_create("com.hanamichi", DISPATCH_QUEUE_SERIAL);
+
+    dispatch_async(queue, ^{
+        for (NSInteger i = 0; i < 10; i++) {
+            NSLog(@"%zd: %@", i, [NSThread currentThread]);
+        }
+    });
+    
 }
 
 

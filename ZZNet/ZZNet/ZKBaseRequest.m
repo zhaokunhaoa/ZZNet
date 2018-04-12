@@ -29,11 +29,12 @@
 
 - (void)start {
     
-    NSURLSessionDataTask *task = [self.manager GET:[[self action] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding] parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    NSURLSessionDataTask *task = [self.manager POST:[[self action] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding] parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         NSLog(@"\n>>>>> success >>>>>\n");
         [self.tasks removeObjectForKey:@(task.taskIdentifier)];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"\n>>>>> error >>>>>\n");
+        NSLog(@"%@", error.debugDescription);
         [self.tasks removeObjectForKey:@(task.taskIdentifier)];
         
     }];
@@ -74,7 +75,7 @@
 #pragma mark - sync
 - (void)testSync {
     //创建串行队列
-    dispatch_queue_t queue = dispatch_queue_create("com.dreamingwish.subsystem.task", DISPATCH_QUEUE_SERIAL);
+    dispatch_queue_t queue = dispatch_queue_create("ZZNet.Request.Sync.task", DISPATCH_QUEUE_SERIAL);
     //设置信号总量为1，保证只有一个进程执行
     dispatch_semaphore_t semaphore = dispatch_semaphore_create(1);
     dispatch_async(queue, ^(){
@@ -88,13 +89,14 @@
         [self requestSyncWith:@"B" sema:semaphore];
     });
     dispatch_async(queue, ^(){
-                //请求C
+        //请求C
         [self requestSyncWith:@"C" sema:semaphore];
         
     });
 }
 
 - (void)requestSyncWith:(NSString *)tagStr sema:(dispatch_semaphore_t)sema {
+    NSLog(@"join: %@", tagStr);
     dispatch_semaphore_wait(sema, DISPATCH_TIME_FOREVER);
     NSLog(@"begain: %@", tagStr);
 

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3E760C257E4D73A00F8BC8EF /* Pods_ZZNet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44E379EEB2F43011C91F7BE2 /* Pods_ZZNet.framework */; };
+		BCDA14E92052374C00403934 /* ZKGroupRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = BCDA14E82052374C00403934 /* ZKGroupRequest.m */; };
 		CDCD881C20512D88006EF362 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CDCD881B20512D88006EF362 /* AppDelegate.m */; };
 		CDCD881F20512D88006EF362 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDCD881E20512D88006EF362 /* ViewController.m */; };
 		CDCD882220512D88006EF362 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDCD882020512D88006EF362 /* Main.storyboard */; };
@@ -20,6 +21,8 @@
 
 /* Begin PBXFileReference section */
 		44E379EEB2F43011C91F7BE2 /* Pods_ZZNet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZZNet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BCDA14E72052374C00403934 /* ZKGroupRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZKGroupRequest.h; sourceTree = "<group>"; };
+		BCDA14E82052374C00403934 /* ZKGroupRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZKGroupRequest.m; sourceTree = "<group>"; };
 		C5A07490891919CD602D24A4 /* Pods-ZZNet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZZNet.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZZNet/Pods-ZZNet.release.xcconfig"; sourceTree = "<group>"; };
 		CDCD881720512D88006EF362 /* ZZNet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZZNet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDCD881A20512D88006EF362 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -100,6 +103,8 @@
 			children = (
 				CDCD883720512F4B006EF362 /* ZKBaseRequest.h */,
 				CDCD883620512F4B006EF362 /* ZKBaseRequest.m */,
+				BCDA14E72052374C00403934 /* ZKGroupRequest.h */,
+				BCDA14E82052374C00403934 /* ZKGroupRequest.m */,
 			);
 			path = ZZNet;
 			sourceTree = "<group>";
@@ -241,6 +246,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCDA14E92052374C00403934 /* ZKGroupRequest.m in Sources */,
 				CDCD881F20512D88006EF362 /* ViewController.m in Sources */,
 				CDCD883820512F4B006EF362 /* ZKBaseRequest.m in Sources */,
 				CDCD882A20512D88006EF362 /* main.m in Sources */,
