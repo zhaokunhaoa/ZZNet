@@ -29,12 +29,12 @@
 
 - (void)start {
     
-    NSURLSessionDataTask *task = [self.manager POST:[[self action] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding] parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    NSURLSessionDataTask *task = [self.manager GET:[[self action] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding] parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         NSLog(@"\n>>>>> success >>>>>\n");
         [self.tasks removeObjectForKey:@(task.taskIdentifier)];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"\n>>>>> error >>>>>\n");
-        NSLog(@"%@", error.debugDescription);
+//        NSLog(@"%@", error.debugDescription);
         [self.tasks removeObjectForKey:@(task.taskIdentifier)];
         
     }];
