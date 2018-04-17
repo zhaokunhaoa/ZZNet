@@ -1,14 +1,14 @@
 //
-//  ZKGroupRequest.m
+//  ZKSerialRequest.m
 //  ZZNet
 //
-//  Created by Zhao Kun on 2018/3/9.
+//  Created by Zhao Kun on 2018/4/17.
 //  Copyright © 2018年 hanamichi. All rights reserved.
 //
 
-#import "ZKGroupRequest.h"
+#import "ZKSerialRequest.h"
 
-@implementation ZKGroupRequest
+@implementation ZKSerialRequest
 
 - (void)start {
     NSString *key = [NSString stringWithFormat:@"ZZNet.Request.Sync.task.%@",NSStringFromClass([self class])];
@@ -26,23 +26,6 @@
     }
 }
 
-- (void)startAndCompletion:(void (^)())completion {
-    
-    dispatch_group_t group = dispatch_group_create();
-    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
-    
-    for (ZKBaseRequest *request in self.requests) {
-        request.requestType = ZKBaseRequestTypeGroup;
-        dispatch_group_async(group, queue, ^{
-            [request startInGroup];
-        });
-    }
-    dispatch_group_notify(group, dispatch_get_main_queue(), ^{
-        //刷新界面
-        completion();
-    });
-}
-
 - (void)cancel {
     for (ZKBaseRequest *request in self.requests) {
         [request cancel];
@@ -50,4 +33,3 @@
 }
 
 @end
-

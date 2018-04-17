@@ -30,10 +30,20 @@
                                     <segue destination="QTt-Hk-n5n" kind="push" id="L1L-j9-6ta"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Auc-uU-bI0">
+                                <rect key="frame" x="163.5" y="371.5" width="48" height="34"/>
+                                <color key="backgroundColor" red="1" green="0.56842701848909138" blue="0.46625555066887903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="group"/>
+                                <connections>
+                                    <action selector="clickSerial:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fF7-K5-cye"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="p47-CB-the" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="FDX-3J-hFM"/>
+                            <constraint firstItem="Auc-uU-bI0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gnS-bQ-Ftn"/>
+                            <constraint firstItem="Auc-uU-bI0" firstAttribute="top" secondItem="p47-CB-the" secondAttribute="bottom" constant="20" id="hD4-U0-gDd"/>
                             <constraint firstItem="p47-CB-the" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mdB-jN-Vkt"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>

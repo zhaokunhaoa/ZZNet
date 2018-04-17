@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		3E760C257E4D73A00F8BC8EF /* Pods_ZZNet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44E379EEB2F43011C91F7BE2 /* Pods_ZZNet.framework */; };
+		BC6E14412084CB8A000AE4B4 /* ZKTestVCRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = BC6E14402084CB8A000AE4B4 /* ZKTestVCRequest.m */; };
+		BC6E144420862A68000AE4B4 /* ZKTestVC02Request.m in Sources */ = {isa = PBXBuildFile; fileRef = BC6E144320862A68000AE4B4 /* ZKTestVC02Request.m */; };
+		BC6E144720862A76000AE4B4 /* Test02ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC6E144620862A76000AE4B4 /* Test02ViewController.m */; };
+		BC6E144A208631AB000AE4B4 /* ZKSerialRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = BC6E1449208631AB000AE4B4 /* ZKSerialRequest.m */; };
+		BC6E144D2086342F000AE4B4 /* ZKTestVC03Request.m in Sources */ = {isa = PBXBuildFile; fileRef = BC6E144C2086342F000AE4B4 /* ZKTestVC03Request.m */; };
 		BCDA14E92052374C00403934 /* ZKGroupRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = BCDA14E82052374C00403934 /* ZKGroupRequest.m */; };
 		CDCD881C20512D88006EF362 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CDCD881B20512D88006EF362 /* AppDelegate.m */; };
 		CDCD881F20512D88006EF362 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDCD881E20512D88006EF362 /* ViewController.m */; };
@@ -21,6 +26,16 @@
 
 /* Begin PBXFileReference section */
 		44E379EEB2F43011C91F7BE2 /* Pods_ZZNet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZZNet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC6E143F2084CB8A000AE4B4 /* ZKTestVCRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZKTestVCRequest.h; sourceTree = "<group>"; };
+		BC6E14402084CB8A000AE4B4 /* ZKTestVCRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZKTestVCRequest.m; sourceTree = "<group>"; };
+		BC6E144220862A68000AE4B4 /* ZKTestVC02Request.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZKTestVC02Request.h; sourceTree = "<group>"; };
+		BC6E144320862A68000AE4B4 /* ZKTestVC02Request.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZKTestVC02Request.m; sourceTree = "<group>"; };
+		BC6E144520862A76000AE4B4 /* Test02ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Test02ViewController.h; sourceTree = "<group>"; };
+		BC6E144620862A76000AE4B4 /* Test02ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Test02ViewController.m; sourceTree = "<group>"; };
+		BC6E1448208631AB000AE4B4 /* ZKSerialRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZKSerialRequest.h; sourceTree = "<group>"; };
+		BC6E1449208631AB000AE4B4 /* ZKSerialRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZKSerialRequest.m; sourceTree = "<group>"; };
+		BC6E144B2086342F000AE4B4 /* ZKTestVC03Request.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZKTestVC03Request.h; sourceTree = "<group>"; };
+		BC6E144C2086342F000AE4B4 /* ZKTestVC03Request.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZKTestVC03Request.m; sourceTree = "<group>"; };
 		BCDA14E72052374C00403934 /* ZKGroupRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZKGroupRequest.h; sourceTree = "<group>"; };
 		BCDA14E82052374C00403934 /* ZKGroupRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZKGroupRequest.m; sourceTree = "<group>"; };
 		C5A07490891919CD602D24A4 /* Pods-ZZNet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZZNet.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZZNet/Pods-ZZNet.release.xcconfig"; sourceTree = "<group>"; };
@@ -90,6 +105,14 @@
 				CDCD882020512D88006EF362 /* Main.storyboard */,
 				CDCD883020512E36006EF362 /* TestViewController.h */,
 				CDCD883120512E36006EF362 /* TestViewController.m */,
+				BC6E143F2084CB8A000AE4B4 /* ZKTestVCRequest.h */,
+				BC6E14402084CB8A000AE4B4 /* ZKTestVCRequest.m */,
+				BC6E144520862A76000AE4B4 /* Test02ViewController.h */,
+				BC6E144620862A76000AE4B4 /* Test02ViewController.m */,
+				BC6E144220862A68000AE4B4 /* ZKTestVC02Request.h */,
+				BC6E144320862A68000AE4B4 /* ZKTestVC02Request.m */,
+				BC6E144B2086342F000AE4B4 /* ZKTestVC03Request.h */,
+				BC6E144C2086342F000AE4B4 /* ZKTestVC03Request.m */,
 				CDCD882320512D88006EF362 /* Assets.xcassets */,
 				CDCD882520512D88006EF362 /* LaunchScreen.storyboard */,
 				CDCD882820512D88006EF362 /* Info.plist */,
@@ -103,6 +126,8 @@
 			children = (
 				CDCD883720512F4B006EF362 /* ZKBaseRequest.h */,
 				CDCD883620512F4B006EF362 /* ZKBaseRequest.m */,
+				BC6E1448208631AB000AE4B4 /* ZKSerialRequest.h */,
+				BC6E1449208631AB000AE4B4 /* ZKSerialRequest.m */,
 				BCDA14E72052374C00403934 /* ZKGroupRequest.h */,
 				BCDA14E82052374C00403934 /* ZKGroupRequest.m */,
 			);
@@ -251,7 +276,12 @@
 				CDCD883820512F4B006EF362 /* ZKBaseRequest.m in Sources */,
 				CDCD882A20512D88006EF362 /* main.m in Sources */,
 				CDCD883320512E36006EF362 /* TestViewController.m in Sources */,
+				BC6E144D2086342F000AE4B4 /* ZKTestVC03Request.m in Sources */,
+				BC6E144720862A76000AE4B4 /* Test02ViewController.m in Sources */,
+				BC6E144A208631AB000AE4B4 /* ZKSerialRequest.m in Sources */,
 				CDCD881C20512D88006EF362 /* AppDelegate.m in Sources */,
+				BC6E14412084CB8A000AE4B4 /* ZKTestVCRequest.m in Sources */,
+				BC6E144420862A68000AE4B4 /* ZKTestVC02Request.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

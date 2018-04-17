@@ -7,11 +7,13 @@
 //
 
 #import "TestViewController.h"
-#import "ZKBaseRequest.h"
+#import "ZKTestVCRequest.h"
 
-@interface TestViewController ()
+NSString * const tarketKey = @"Request City";
 
-@property (nonatomic, strong) ZKBaseRequest *request;
+@interface TestViewController () <ZKBaseRequestDelegate>
+
+@property (nonatomic, strong) ZKTestVCRequest *request;
 
 @end
 
@@ -20,6 +22,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+
 }
 
 - (IBAction)start:(id)sender {
@@ -38,10 +41,23 @@
     [self.request cancel];
 }
 
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    NSLog(@"%@", self.request.targetKey);
+}
+
+- (void)requestFinished:(ZKBaseRequest *)request responseObject:(id)responseObject {
+    NSLog(@"%@", responseObject);
+}
+
+- (void)requestFailed:(ZKBaseRequest *)request error:(NSError *)error {
+    NSLog(@"%@", error.debugDescription);
+}
+
 #pragma mark - getter
-- (ZKBaseRequest *)request {
+- (ZKTestVCRequest *)request {
     if (!_request) {
-        _request = [ZKBaseRequest new];
+        _request = [[ZKTestVCRequest alloc] initWithTargetKey:tarketKey];
+        _request.delegate = self;
     }
     return _request;
 }
